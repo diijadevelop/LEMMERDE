@@ -1,0 +1,20 @@
+// main: style.scss
+
+/*QUESTO AD ESEMPIO E' UN CODICE PER IMPORTARE UN'IMMAGINE DI BACKGROUND CHE SI ADATTI PERFETTAMENTE AD OGNI BROWSER.
+HO UNA LINEA DI CODICE PER WEBKIT, MOZILLA, OPERA.
+USO IL MIXIN IN QUESTO CASO*/
+
+/*Il mixin è in pratica una funzione, che posso definire con un nome e un contenuto eseguibile*/
+
+@mixin background-cover($img_url){
+  background: url($img_url) no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+@mixin responsive($x,$y){
+  height: 0;
+  padding-bottom: ($x/$y)*100%;
+}

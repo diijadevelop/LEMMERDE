@@ -1,0 +1,315 @@
+
+@import 'mixins';
+@import 'variables';
+@import 'media';
+
+@import url('https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=New+Tegomin&display=swap');
+
+
+
+body{
+  //@include background-cover("cesso.jpg");
+  background-color: black;
+  height: 100%;
+  width: 100%;
+
+
+  font-family: 'New Tegomin', sans-serif;
+  //cursor: url('poop.ani'), pointer;
+}
+
+
+.hr-main{
+  border-top: 1px solid white;
+  width: 75%;
+  margin-top: .3rem;
+  margin-bottom: 0;
+}
+
+.padding{
+  padding-bottom: 1rem;
+}
+
+a:hover{
+  cursor: url("http://orig01.deviantart.net/0b7c/f/2015/241/7/f/poopcursor1_by_milkate-d97ml6o.png"), pointer;
+}
+
+.article{
+  a:link, a:visited{
+    color: lawngreen;
+  }
+  a:hover{
+    color: $primary-color;
+  }
+}
+///////NAVBAR
+
+nav{
+  font-family: 'Zen Dots', sans-serif;
+  background: black;
+  font-size: 1rem;
+  padding: .2rem;
+  border-bottom: 1px solid $primary-color;
+
+}
+.navbar-brand{
+  color: $primary-color;
+  font-size: 2rem;
+}
+.title{
+  font-size: 1rem;
+}
+.nav-item:link, .nav-item:visited{
+  color:white;
+}
+.nav-item:hover{
+  color:$primary-color;
+}
+/* Set the border color */
+
+    .custom-toggler.navbar-toggler {
+        border-color: $primary-color;
+    }
+    /* Setting the stroke to green using rgb values (0, 128, 0) */
+
+    .custom-toggler .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgb(79, 147, 80)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+    }
+
+
+
+
+
+
+
+
+
+// SLIDESHOW
+.carousel{
+
+    .carousel-inner img{
+      width: 100%;
+    }
+      width:80%;
+      margin: 0 auto;
+
+  }
+
+  .carousel-control-next:hover , .carousel-control-prev:hover{
+    color: $primary-color;
+  }
+
+.btn-success{
+  background: $primary-color;
+  border: 3px solid black;
+  color: black;
+  font-family: 'Zen Dots', sans-serif;
+}
+.btn-success:hover{
+  background: black;
+  border: 3px solid $primary-color;
+  color: $primary-color;
+}
+
+
+//////JUMBOTRON
+.intro{
+
+  color: white;
+  padding: 1rem;
+  p{
+    font-size: 1.3rem;
+  }
+  span{
+    font-size: 2rem;
+  }
+
+  .icon{
+
+    color: $primary-color;
+    margin-left: 1rem;
+    font-size: 3em;
+  }
+  .icon:hover{
+    color: #2d7507;
+  }
+}
+
+
+//////CONNECT
+.connect{
+  h2{
+    color: white;
+  }
+  hr{
+  border-top: 2px solid #b4b4b4;
+  width: 95%;
+  margin-top: .3rem;
+  margin-bottom: 1rem;
+}
+  width: 75%;
+  margin: 0 auto;
+}
+
+
+//////FOOTER
+
+.social-icons{
+  a{
+    color: white;
+    padding: .5rem;
+    font-size: 1.7em;
+  }
+  a:hover{
+    color: $primary-color;
+  }
+}
+/*  //Audio
+iframe{
+  display: none;
+}
+*/
+
+
+footer{
+  background: black;
+}
+
+////ALTRE PAGINE
+
+.title:hover{
+    color:$primary-color;
+}
+.fa-toilet{
+  font-size: 1.5em;
+  color: $primary-color;
+  filter: brightness(200%);
+  }
+
+.fa-toilet:hover{
+  color: $primary-color;
+}
+
+    //Merchandise
+
+  .merch-grid-item{
+    width:100%;
+  }
+  .cover{
+  @include background-cover("immagine.jpg");
+
+  @include responsive(2,8);
+//filter: grayscale(100%);
+//filter: saturate(1);
+filter: hue-rotate(20deg);
+}
+
+
+
+@media only screen and (min-width: 768px){
+  nav{
+    border: none;
+  }
+  .navbar-nav{
+    max-height: 6rem;
+
+
+    .nav-item{
+      width: 9rem;
+      height: 4rem;
+      font-size: 0.9rem;
+      //border-right: 0.3px solid lighten(black,30%);
+      margin: 0 auto;
+
+    }
+    .nav-item:last-of-type{
+      border: none;
+    }
+  }
+  .title{
+    font-size: 2rem;
+  }
+  .carousel{
+    width: 800px;
+    height: 400px;
+
+    .carousel-inner img{
+      width:400px;
+      height: 400px;
+    }
+  }
+
+  //Audio
+  iframe{
+    display: block;
+    margin-left: auto;
+  }
+  .audio{
+    max-width: 400PX;
+  }
+
+
+footer{
+  background: lighten (black, 20%);
+  height: auto;
+}
+// ALTRE PAGINE
+
+.fa-toilet{
+  font-size: 2em;
+  }
+}
+    //MERCHANDISE
+    .merch-grid-item{
+      width: 100%;
+      max-height: 30em;
+    }
+
+/*---Media Queries --*/
+@media (max-width: 992px) {
+
+  }
+@media (max-width: 768px) {
+
+}
+@media (max-width: 576px) {
+
+}
+
+
+/*---Firefox Bug Fix --*/
+.carousel-item {
+  transition: -webkit-transform 0.5s ease;
+  transition: transform 0.5s ease;
+  transition: transform 0.5s ease, -webkit-transform 0.5s ease;
+  -webkit-backface-visibility: visible;
+  backface-visibility: visible;
+}
+
+
+/*--- Bootstrap Padding Fix --*/
+[class*="col-"] {
+    padding: 1rem;
+}
+
+
+
+
+
+/*
+Extra small (xs) devices (portrait phones, less than 576px)
+No media query since this is the default in Bootstrap
+
+Small (sm) devices (landscape phones, 576px and up)
+@media (min-width: 576px) { ... }
+
+Medium (md) devices (tablets, 768px and up)
+@media (min-width: 768px) { ... }
+
+Large (lg) devices (desktops, 992px and up)
+@media (min-width: 992px) { ... }
+
+Extra (xl) large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { ... }
+*/
